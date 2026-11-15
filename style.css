@@ -239,3 +239,36 @@ button:hover {
     flex-direction: column;
   }
 }
+.form-producto {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fila-link, .fila-datos, .fila-preview {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.fila-datos input:first-child { flex: 2; }
+
+.fila-preview { justify-content: space-between; }
+.fila-preview button { margin-left: auto; }
+
+.preview-img {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  background: white;
+}
+
+@media (max-width: 600px) {
+  .fila-link, .fila-datos { flex-direction: column; align-items: stretch; }
+}
