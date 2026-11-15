@@ -21,9 +21,7 @@
         <button id="btn-crear-carpeta">+ Crear Carpeta</button>
       </div>
 
-      <div id="grid-carpetas" class="grid-carpetas">
-        <!-- Acá se cargan las carpetas automáticamente -->
-      </div>
+      <div id="grid-carpetas" class="grid-carpetas"></div>
     </section>
 
     <!-- VISTA 2: PRODUCTOS DENTRO DE UNA CARPETA -->
@@ -33,19 +31,29 @@
         <h2 id="titulo-carpeta-actual">WishList</h2>
       </div>
 
-      <div class="agregar-producto-box">
-        <input type="url" id="input-link-ml" placeholder="Pegá acá el link de Mercado Libre...">
-        <button id="btn-agregar-producto">Agregar Regalo</button>
+      <div class="form-producto">
+        <div class="fila-link">
+          <input type="url" id="input-link-ml" placeholder="1) Pegá acá el link de Mercado Libre...">
+          <button id="btn-autocompletar" class="btn-secundario">✨ Autocompletar</button>
+        </div>
+
+        <div class="fila-datos">
+          <input type="text" id="input-titulo" placeholder="Nombre del producto">
+          <input type="text" id="input-precio" placeholder="Precio (ej: $ 45.000)">
+          <input type="url" id="input-imagen" placeholder="Link de la foto (opcional)">
+        </div>
+
+        <div class="fila-preview">
+          <img id="preview-img" class="preview-img oculto" alt="Vista previa">
+          <button id="btn-agregar-producto">🎁 Agregar Regalo</button>
+        </div>
       </div>
       <p id="estado-carga" class="estado-texto"></p>
 
-      <div id="grid-productos" class="grid-productos">
-        <!-- Acá se cargan los regalos automáticamente -->
-      </div>
+      <div id="grid-productos" class="grid-productos"></div>
     </section>
   </main>
 
-  <!-- Conexión con Firebase (Base de datos gratuita en tiempo real) -->
   <script type="module" src="app.js"></script>
 </body>
 </html>
