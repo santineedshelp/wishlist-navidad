@@ -3,18 +3,15 @@ import {
   getFirestore, collection, addDoc, onSnapshot, doc, updateDoc, deleteDoc, query, where, orderBy 
 } from "https://gstatic.com";
 
-// =========================================================================
-// REEMPLAZÁ ESTOS DATOS CON LOS DE TU PROYECTO GRATUITO EN FIREBASE
-// =========================================================================
-  const firebaseConfig = {
-    apiKey: "AIzaSyDsztog3aptTAs1FLq5UlfOwERtScEOxik",
-    authDomain: "wishlist-navidad-60032.firebaseapp.com",
-    projectId: "wishlist-navidad-60032",
-    storageBucket: "wishlist-navidad-60032.firebasestorage.app",
-    messagingSenderId: "996022231424",
-    appId: "1:996022231424:web:98157b5602e6e5e6e06165",
-    measurementId: "G-XC3MJG7B6G"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyDsztog3aptTAs1FLq5UlfOwERtScEOxik",
+  authDomain: "wishlist-navidad-60032.firebaseapp.com",
+  projectId: "wishlist-navidad-60032",
+  storageBucket: "wishlist-navidad-60032.firebasestorage.app",
+  messagingSenderId: "996022231424",
+  appId: "1:996022231424:web:98157b5602e6e5e6e06165",
+  measurementId: "G-XC3MJG7B6G"
+};
 
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);
