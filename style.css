@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #2d3436;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(135deg, #b32428, #d63031);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+header p {
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.oculto {
+  display: none !important;
+}
+
+/* Cajas de inputs y botones */
+.nueva-carpeta-box, .agregar-producto-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: #d63031;
+}
+
+button {
+  background-color: #009432;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #006266;
+}
+
+.btn-secundario {
+  background-color: #636e72;
+}
+
+.btn-secundario:hover {
+  background-color: #2d3436;
+}
+
+/* Grilla de Carpetas */
+.grid-carpetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.carpeta-card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.carpeta-card:hover {
+  transform: translateY(-4px);
+  border-color: #d63031;
+}
+
+.carpeta-icono {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.carpeta-nombre {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Vista interior de carpeta */
+.header-carpeta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.estado-texto {
+  margin-bottom: 15px;
+  color: #636e72;
+  font-size: 0.95rem;
+}
+
+/* Grilla de Productos */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.producto-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity 0.3s;
+}
+
+.producto-card.comprado {
+  opacity: 0.6;
+  background-color: #f1f2f6;
+}
+
+.producto-card.comprado .producto-titulo {
+  text-decoration: line-through;
+}
+
+.producto-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: white;
+  padding: 15px;
+  border-bottom: 1px solid #f1f2f6;
+}
+
+.producto-info {
+  padding: 15px;
+  flex: 1;
+}
+
+.producto-titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.producto-precio {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #009432;
+  margin-bottom: 12px;
+}
+
+.producto-acciones {
+  padding: 0 15px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-ml {
+  display: block;
+  text-align: center;
+  background-color: #ffe600;
+  color: #2d3277;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.btn-comprar {
+  background-color: #0984e3;
+  font-size: 0.9rem;
+  padding: 10px;
+}
+
+.btn-comprar.ya-comprado {
+  background-color: #b2bec3;
+  color: #2d3436;
+}
+
+.btn-borrar {
+  background: none;
+  color: #d63031;
+  font-size: 0.8rem;
+  padding: 4px;
+}
+
+.btn-borrar:hover {
+  background: none;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .nueva-carpeta-box, .agregar-producto-box {
+    flex-direction: column;
+  }
+}

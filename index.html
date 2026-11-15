@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WishList Navideña</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎄 WishList Navideña 🎁</h1>
+    <p>Elegí una carpeta para ver qué regalar o armá tu propia lista</p>
+  </header>
+
+  <main class="container">
+    <!-- VISTA 1: CARPETAS DE TODOS -->
+    <section id="vista-carpetas">
+      <div class="nueva-carpeta-box">
+        <input type="text" id="input-nombre-carpeta" placeholder="Ej: WishList Mari">
+        <button id="btn-crear-carpeta">+ Crear Carpeta</button>
+      </div>
+
+      <div id="grid-carpetas" class="grid-carpetas">
+        <!-- Acá se cargan las carpetas automáticamente -->
+      </div>
+    </section>
+
+    <!-- VISTA 2: PRODUCTOS DENTRO DE UNA CARPETA -->
+    <section id="vista-productos" class="oculto">
+      <div class="header-carpeta">
+        <button id="btn-volver" class="btn-secundario">← Volver a carpetas</button>
+        <h2 id="titulo-carpeta-actual">WishList</h2>
+      </div>
+
+      <div class="agregar-producto-box">
+        <input type="url" id="input-link-ml" placeholder="Pegá acá el link de Mercado Libre...">
+        <button id="btn-agregar-producto">Agregar Regalo</button>
+      </div>
+      <p id="estado-carga" class="estado-texto"></p>
+
+      <div id="grid-productos" class="grid-productos">
+        <!-- Acá se cargan los regalos automáticamente -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Conexión con Firebase (Base de datos gratuita en tiempo real) -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
